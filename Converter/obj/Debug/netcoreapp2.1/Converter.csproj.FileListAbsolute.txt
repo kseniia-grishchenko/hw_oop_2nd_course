@@ -1,0 +1,11 @@
+C:\OOP_2nd_course\Converter\bin\Debug\netcoreapp2.1\Converter.deps.json
+C:\OOP_2nd_course\Converter\bin\Debug\netcoreapp2.1\Converter.runtimeconfig.json
+C:\OOP_2nd_course\Converter\bin\Debug\netcoreapp2.1\Converter.runtimeconfig.dev.json
+C:\OOP_2nd_course\Converter\bin\Debug\netcoreapp2.1\Converter.dll
+C:\OOP_2nd_course\Converter\bin\Debug\netcoreapp2.1\Converter.pdb
+C:\OOP_2nd_course\Converter\obj\Debug\netcoreapp2.1\Converter.csprojAssemblyReference.cache
+C:\OOP_2nd_course\Converter\obj\Debug\netcoreapp2.1\Converter.csproj.CoreCompileInputs.cache
+C:\OOP_2nd_course\Converter\obj\Debug\netcoreapp2.1\Converter.AssemblyInfoInputs.cache
+C:\OOP_2nd_course\Converter\obj\Debug\netcoreapp2.1\Converter.AssemblyInfo.cs
+C:\OOP_2nd_course\Converter\obj\Debug\netcoreapp2.1\Converter.dll
+C:\OOP_2nd_course\Converter\obj\Debug\netcoreapp2.1\Converter.pdb
