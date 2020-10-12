@@ -16,7 +16,7 @@ namespace TriangleWF
         {
             InitializeComponent();
             Text = "Triangle";
-            this.Size = new Size(350, 350);
+            this.Size = new Size(500, 375);
             this.StartPosition = FormStartPosition.CenterScreen;
             this.BackColor = Color.Lavender;
             this.ForeColor = Color.Black;
@@ -26,15 +26,15 @@ namespace TriangleWF
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            double a;
-            a = Convert.ToDouble(sideATextBox.Text);
-            double b;
-            b = Convert.ToDouble(sideBTextBox.Text);
-            double c;
-            c = Convert.ToDouble(sideCTextBox.Text);
-            Triangle newTriangle;
-            if (a < b + c && b < a + c && c < a + b)
-             {
+            try
+            {
+                double a;
+                a = Convert.ToDouble(sideATextBox.Text);
+                double b;
+                b = Convert.ToDouble(sideBTextBox.Text);
+                double c;
+                c = Convert.ToDouble(sideCTextBox.Text);
+                Triangle newTriangle;
                 labelError.Visible = false;
                 if (a == b && b == c)
                 {
@@ -47,9 +47,10 @@ namespace TriangleWF
                 TriangleActions newForm = new TriangleActions(newTriangle);
                 newForm.Show();
             }
-            else
+            catch(Exception ex)
             {
                 labelError.Visible = true;
+                labelError.Text = ex.Message;
             } 
         }
     }

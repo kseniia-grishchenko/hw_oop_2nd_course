@@ -22,23 +22,17 @@ namespace TriangleWF
         {
             InitializeComponent();
             this.triangle = triangle;
-            if(triangle is EquilateralTriangle)
+            if (triangle is EquilateralTriangle)
             {
                 etLabel.Visible = true;
                 calcAreaButton.Visible = true;
             }
         }
 
-
-        private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void ChangeSideOp_SelectedIndexChanged(object sender, EventArgs e)
         {
             changedSideBox.Visible = true;
-            
+
         }
 
         private void ApplyButton_Click(object sender, EventArgs e)
@@ -49,10 +43,10 @@ namespace TriangleWF
             switch (calculateAngleOp.Text)
             {
                 case "A":
-                   angle = triangle.CalculateAngleBetweenBAndC();
+                    angle = triangle.CalculateAngleBetweenBAndC();
                     break;
                 case "B":
-                   angle = triangle.CalculateAngleBetweenAAndC();
+                    angle = triangle.CalculateAngleBetweenAAndC();
                     break;
                 case "C":
                     angle = triangle.CalculateAngleBetweenAAndB();
@@ -69,7 +63,7 @@ namespace TriangleWF
                 double perimeter = triangle.CalculatePerimeter();
                 resLabel.Text += " Perimeter: " + perimeter.ToString("F2");
             }
-            if(triangle is EquilateralTriangle && calcAreaButton.Checked == true)
+            if (triangle is EquilateralTriangle && calcAreaButton.Checked == true)
             {
                 double area = ((EquilateralTriangle)triangle).CalculateArea();
                 resLabel.Text += " Area: " + area.ToString("F2");
@@ -80,53 +74,69 @@ namespace TriangleWF
 
         private void ChangedSideBox_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyValue == 13)
+            try
             {
-                switch (changeSideOp.Text)
+                if (e.KeyValue == 13)
                 {
-                    case "a":
-                        double a;
-                        a = Convert.ToDouble(changedSideBox.Text);
-                        triangle.ChangeA = a;
-                        break;
-                    case "b":
-                        double b;
-                        b = Convert.ToDouble(changedSideBox.Text);
-                        triangle.ChangeB = b;
-                        break;
-                    case "c":
-                        double c;
-                        c = Convert.ToDouble(changedSideBox.Text);
-                        triangle.ChangeC = c;
-                        break;
-                    default:
-                        break;
-                }
-                if(triangle.ChangeA != triangle.ChangeB || triangle.ChangeC != triangle.ChangeB)
-                {
-                    this.triangle = new Triangle(triangle.ChangeA, triangle.ChangeB, triangle.ChangeC);
-                    etLabel.Visible = false;
-                    calcAreaButton.Visible = false;
-                }
-                if (triangle.ChangeA == triangle.ChangeB && triangle.ChangeC == triangle.ChangeB)
-                {
-                    this.triangle = new EquilateralTriangle(triangle.ChangeA);
-                    etLabel.Visible = true;
-                    calcAreaButton.Visible = true;
-                }
+                    labelSuccess.Text = "";
+                    calculateAngleOp.Visible = true;
+                    PerimeterCalc.Visible = true;
+                    applyButton.Visible = true;
+                    double changed;
+                    changed = Convert.ToDouble(changedSideBox.Text);
+                    if(changed < 0)
+                    {
+                        throw new Exception("Value must be positive");
+                    }
+                    switch (changeSideOp.Text)
+                    {
+                        case "a":
+                            triangle.ChangeA = changed;
+                            break;
+                        case "b":
+                            triangle.ChangeB = changed;
+                            break;
+                        case "c":
+                            triangle.ChangeC = changed;
+                            break;
+                        default:
+                            break;
+                    }
+                    if (triangle.ChangeA != triangle.ChangeB || triangle.ChangeC != triangle.ChangeB)
+                    {
+                        this.triangle = new Triangle(triangle.ChangeA, triangle.ChangeB, triangle.ChangeC);
+                        etLabel.Visible = false;
+                        calcAreaButton.Visible = false;
+                    }
+                    if (triangle.ChangeA == triangle.ChangeB && triangle.ChangeC == triangle.ChangeB)
+                    {
+                        this.triangle = new EquilateralTriangle(triangle.ChangeA);
+                        etLabel.Visible = true;
+                        calcAreaButton.Visible = true;
+                    }
 
-                changedSideBox.Text = "";
-                changedSideBox.Visible = false;
-                labelSuccess.Visible = true; ;
+                    changedSideBox.Text = "";
+                    changedSideBox.Visible = false;
+                    labelSuccess.Text = "Success!";
+                }
             }
+            catch (Exception ex)
+            {
+                labelSuccess.Text = ex.Message;
+                labelSuccess.Visible = true;
+                calcAreaButton.Visible = false;
+                calculateAngleOp.Visible = false;
+                PerimeterCalc.Visible = false;
+                applyButton.Visible = false;
+            }
+            }
+        
 
-        }
-
-        private void DoneButton_Click(object sender, EventArgs e)
+            private void DoneButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
-        
     }
 }
+
+

@@ -14,26 +14,68 @@ namespace TriangleWF
 
         public Triangle(double a, double b, double c)
         {
-            this.a = a;
-            this.b = b;
-            this.c = c;
+            if (a < 0 || b < 0 || c < 0)
+            {
+                throw new Exception("Values must be positive!");
+            }
+            if (a < b + c && b < a + c && c < a + b)
+            {
+                this.a = a;
+                this.b = b;
+                this.c = c;
+            }
+            else
+            {
+                throw new Exception("Triangle can`t be created");
+            }
+
         }
 
         public double ChangeA
         {
             get { return a; }
-            set { a = value; }
+            set
+            {
+                if(value < 0)
+                {
+                    throw new Exception("Value must be positive");
+                }
+                else
+                {
+                    a = value;
+                }
+            }
         }
 
         public double ChangeB
         {
             get { return b; }
-            set { b = value; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("Value must be positive");
+                }
+                else
+                {
+                    b = value;
+                }
+            }
         }
         public double ChangeC
         {
             get { return c; }
-            set { c = value; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("Value must be positive");
+                }
+                else
+                {
+                    c = value;
+                }
+            }
         }
         public double CalculateAngleBetweenAAndB()
         {
@@ -57,7 +99,13 @@ namespace TriangleWF
     {
         public double area;
 
-        public EquilateralTriangle(double side) : base(side, side, side) { }
+        public EquilateralTriangle(double side) : base(side, side, side)
+        {
+        if(side < 0)
+            {
+                throw new Exception("Values must be positive!");
+            }
+        }
 
         public double CalculateArea()
         {

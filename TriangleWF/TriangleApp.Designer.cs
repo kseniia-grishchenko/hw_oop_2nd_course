@@ -48,7 +48,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(408, 100);
+            this.panel1.Size = new System.Drawing.Size(532, 100);
             this.panel1.TabIndex = 0;
             // 
             // label
@@ -59,7 +59,7 @@
             this.label.ForeColor = System.Drawing.Color.Sienna;
             this.label.Location = new System.Drawing.Point(0, 0);
             this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(408, 100);
+            this.label.Size = new System.Drawing.Size(532, 100);
             this.label.TabIndex = 0;
             this.label.Text = "Enter values of  triangle sides";
             this.label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -67,7 +67,7 @@
             // sideATextBox
             // 
             this.sideATextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sideATextBox.Location = new System.Drawing.Point(142, 121);
+            this.sideATextBox.Location = new System.Drawing.Point(236, 121);
             this.sideATextBox.Multiline = true;
             this.sideATextBox.Name = "sideATextBox";
             this.sideATextBox.Size = new System.Drawing.Size(121, 30);
@@ -77,7 +77,7 @@
             // sideBTextBox
             // 
             this.sideBTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sideBTextBox.Location = new System.Drawing.Point(142, 173);
+            this.sideBTextBox.Location = new System.Drawing.Point(236, 173);
             this.sideBTextBox.Multiline = true;
             this.sideBTextBox.Name = "sideBTextBox";
             this.sideBTextBox.Size = new System.Drawing.Size(121, 30);
@@ -87,7 +87,7 @@
             // sideCTextBox
             // 
             this.sideCTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.sideCTextBox.Location = new System.Drawing.Point(142, 226);
+            this.sideCTextBox.Location = new System.Drawing.Point(236, 222);
             this.sideCTextBox.Multiline = true;
             this.sideCTextBox.Name = "sideCTextBox";
             this.sideCTextBox.Size = new System.Drawing.Size(121, 33);
@@ -101,7 +101,7 @@
             this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.okButton.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.okButton.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.okButton.Location = new System.Drawing.Point(153, 278);
+            this.okButton.Location = new System.Drawing.Point(247, 278);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(96, 38);
             this.okButton.TabIndex = 7;
@@ -113,7 +113,7 @@
             // 
             this.labelA.AutoSize = true;
             this.labelA.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelA.Location = new System.Drawing.Point(34, 121);
+            this.labelA.Location = new System.Drawing.Point(77, 121);
             this.labelA.Name = "labelA";
             this.labelA.Size = new System.Drawing.Size(102, 33);
             this.labelA.TabIndex = 8;
@@ -123,7 +123,7 @@
             // 
             this.labelB.AutoSize = true;
             this.labelB.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelB.Location = new System.Drawing.Point(34, 173);
+            this.labelB.Location = new System.Drawing.Point(77, 170);
             this.labelB.Name = "labelB";
             this.labelB.Size = new System.Drawing.Size(104, 33);
             this.labelB.TabIndex = 9;
@@ -133,7 +133,7 @@
             // 
             this.labelC.AutoSize = true;
             this.labelC.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelC.Location = new System.Drawing.Point(34, 222);
+            this.labelC.Location = new System.Drawing.Point(77, 222);
             this.labelC.Name = "labelC";
             this.labelC.Size = new System.Drawing.Size(102, 33);
             this.labelC.TabIndex = 10;
@@ -147,7 +147,7 @@
             this.labelError.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelError.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelError.ForeColor = System.Drawing.Color.Maroon;
-            this.labelError.Location = new System.Drawing.Point(15, 338);
+            this.labelError.Location = new System.Drawing.Point(100, 334);
             this.labelError.Name = "labelError";
             this.labelError.Size = new System.Drawing.Size(383, 35);
             this.labelError.TabIndex = 11;
@@ -159,7 +159,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(408, 403);
+            this.ClientSize = new System.Drawing.Size(532, 403);
             this.Controls.Add(this.labelError);
             this.Controls.Add(this.labelC);
             this.Controls.Add(this.labelB);

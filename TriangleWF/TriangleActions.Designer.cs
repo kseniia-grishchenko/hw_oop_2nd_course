@@ -99,7 +99,6 @@
             this.calculateAngleOp.Size = new System.Drawing.Size(150, 30);
             this.calculateAngleOp.TabIndex = 4;
             this.calculateAngleOp.Text = "Calculate angle";
-            this.calculateAngleOp.SelectedIndexChanged += new System.EventHandler(this.ComboBox2_SelectedIndexChanged);
             // 
             // applyButton
             // 
