@@ -14,23 +14,28 @@ namespace ExcelApplication
 
     public static class NumberConverter
     {
+        const int LastLetter = 26; // number of last letter in english alphabet
+        const int FirstLetterInASCII = 65; //first index of char in ASCII
+        const int LastLetterInASCII = 90; //last index of char in ASCII
+        const int FirstNumberInASCII = 48; //first index of int in ASCII
+        const int LastNumberInASCII = 57; //last index of int in ASCII
         public static string ConvertTo26System(int x)
         {
-            int k = 0;
-            int[] arr = new int[100];
-            while (x > 25)
+            x++;
+            int mod;
+            string colName = "";
+            if(x == 0)
             {
-                arr[k] = x / 26 - 1;
-                k++;
-               x = x % 26;
+                return ((char)(FirstLetterInASCII - 1)).ToString();
+            }
+            while(x > 0)
+            {
+                mod = (x - 1) % LastLetter;
+                colName = ((char)(FirstLetterInASCII + mod)).ToString() + colName;
+                x = (x - mod) / LastLetter;
             }
 
-            arr[k] = x;
-            string result = "";
-            for (int j = 0; j <= k; j++)
-                result += ((char)('A' + arr[j])).ToString();
-
-            return result;
+            return colName;
         }
 
         public static Index ConvertFrom26System(string s)
@@ -40,15 +45,15 @@ namespace ExcelApplication
             index.row = 0;
             for(int i = 0; i < s.Length; i++)
             {
-                if(s[i] >= 64 && s[i] < 91)
+                if(s[i] >= FirstLetterInASCII - 1 && s[i] < LastLetterInASCII + 1)
                 {
-                    index.column *= 26;
-                    index.column += s[i] - 64;
+                    index.column *= LastLetter;
+                    index.column += s[i] - FirstLetterInASCII - 1;
                 }
-                else if(s[i] > 47 && s[i] < 58)
+                else if(s[i] > FirstNumberInASCII - 1 && s[i] < LastNumberInASCII + 1)
                 {
-                    index.row *= 10;
-                    index.row += s[i] - 48;
+                    index.row *= 10; 
+                    index.row += s[i] - FirstNumberInASCII;
                 }
             }
             index.column--;

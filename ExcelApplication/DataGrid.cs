@@ -183,19 +183,8 @@ namespace ExcelApplication
                 if (expression[0] == '=')
                 {
                     expression = expression.Substring(1);
-                    /*Grid[row][col].Value = expression;
-                    Dictionary[cell.Name] = expression;
-                    foreach (var depOnCell in Grid[row][col].CellsDependentOnThis)
-                    {
-                        UpdateCellAndPointers(depOnCell, dataGridView);
-                    }
-                    return; */
                 }
             string convertedExpr = ConvertReferences(row, col, expression);
-            /*if(convertedExpr != "")
-            {
-                convertedExpr = convertedExpr.Substring(1);
-            }*/
             if (Grid[row][col].ContainsLoop(Grid[row][col].NewThisCellDepOn))
             {
                 WriteErrorMessage(cell, "Error! There is a loop", dataGridView);
