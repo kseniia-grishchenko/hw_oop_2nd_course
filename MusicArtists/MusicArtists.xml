@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MusicArtists>
+  <MusicArtist
+    Name = "Taylor Swift"
+    MajorGenre = "Pop"
+    Country = "USA"
+    IncomePerYear = "$185 000 000"
+    ArtistBand = "Solo"
+    MusicActivity = "2003 - present">
+  </MusicArtist>
+  <MusicArtist
+    Name = "Kanye West"
+    MajorGenre = "Hip hop"
+    Country = "USA"
+    IncomePerYear = "$150 000 000"
+    ArtistBand = "Solo"
+    MusicActivity = "1996 - present">
+  </MusicArtist>
+  <MusicArtist
+    Name = "Ed Sheeran"
+    MajorGenre = "Pop"
+    Country = "USA"
+    IncomePerYear = "$110 000 000"
+    ArtistBand = "Solo"
+    MusicActivity = "2005 - present">
+  </MusicArtist>
+   <MusicArtist
+    Name = "The Eagles"
+    MajorGenre = "Rock"
+    Country = "USA"
+    IncomePerYear = "$100 000 000"
+    ArtistBand = "Band"
+    MusicActivity = "1971–1980 1994–2016 2017–present">
+  </MusicArtist>
+   <MusicArtist
+    Name = "Elton John"
+    MajorGenre = "Rock"
+    Country = "USA"
+    IncomePerYear = "$84 000 000"
+    ArtistBand = "Solo"
+    MusicActivity = "1962–present">
+  </MusicArtist>
+    <MusicArtist
+    Name = "Jay-Z"
+    MajorGenre = "Hip hop"
+    Country = "USA"
+    IncomePerYear = "$81 000 000"
+    ArtistBand = "Solo"
+    MusicActivity = "1988–present">
+  </MusicArtist>
+   <MusicArtist
+    Name = "Beyonce"
+    MajorGenre = "Pop"
+    Country = "USA"
+    IncomePerYear = "$81 000 000"
+    ArtistBand = "Solo"
+    MusicActivity = "1997–present">
+  </MusicArtist>
+    <MusicArtist
+    Name = "Drake"
+    MajorGenre = "Hip hop"
+    Country = "USA"
+    IncomePerYear = "$75 000 000"
+    ArtistBand = "Solo"
+    MusicActivity = "2001–present">
+  </MusicArtist>
+    <MusicArtist
+    Name = "Diddy"
+    MajorGenre = "Hip hop"
+    Country = "USA"
+    IncomePerYear = "$70 000 000"
+    ArtistBand = "Solo"
+    MusicActivity = "1990–present">
+  </MusicArtist>
+    <MusicArtist
+    Name = "Metallica"
+    MajorGenre = "Heavy metal"
+    Country = "USA"
+    IncomePerYear = "$68 500 000"
+    ArtistBand = "Band"
+    MusicActivity = "1981–present">
+  </MusicArtist> 
+    <MusicArtist
+    Name = "Rihanna"
+    MajorGenre = "Pop"
+    Country = "USA"
+    IncomePerYear = "$62 000 000"
+    ArtistBand = "Solo"
+    MusicActivity = "2003–present">
+  </MusicArtist>  
+    <MusicArtist
+    Name = "BTS"
+    MajorGenre = "K-pop"
+    Country = "South Korea"
+    IncomePerYear = "$57 000 000"
+    ArtistBand = "Band"
+    MusicActivity = "2013–present">
+  </MusicArtist>
+</MusicArtists>
