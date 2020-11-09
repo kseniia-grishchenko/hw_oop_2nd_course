@@ -48,7 +48,7 @@ namespace ExcelApplication
                 if(s[i] >= FirstLetterInASCII - 1 && s[i] < LastLetterInASCII + 1)
                 {
                     index.column *= LastLetter;
-                    index.column += s[i] - FirstLetterInASCII - 1;
+                    index.column += (s[i]) - (FirstLetterInASCII - 1);
                 }
                 else if(s[i] > FirstNumberInASCII - 1 && s[i] < LastNumberInASCII + 1)
                 {
