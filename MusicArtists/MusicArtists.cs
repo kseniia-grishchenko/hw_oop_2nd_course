@@ -15,6 +15,7 @@ namespace MusicArtists
     public partial class MusicArtists : Form
     {
         string path = "C:\\OOP_2nd_course\\MusicArtists\\MusicArtists.xml";
+        public MusicArtist musicArtist = null;
         public MusicArtists()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace MusicArtists
         private void Search()
         {
             resBox.Clear();
-            MusicArtist musicArtist = new MusicArtist();
+            musicArtist = new MusicArtist();
             IStrategy chosenStrategy;
             if (artistBox.Checked)
             {
