@@ -241,10 +241,7 @@ namespace ExcelApplication
                         reference = sReader.ReadLine();
                         int row = NumberConverter.ConvertFrom26System(reference).row;
                         int col = NumberConverter.ConvertFrom26System(reference).column;
-                        if (row < grid.RowCount && col < grid.ColCount)
-                        {
-                            newReferences.Add(grid.Grid[row][col]);
-                        }
+                        newReferences.Add(grid.Grid[row][col]);
                     }
 
                     int pointerCount = Convert.ToInt32(sReader.ReadLine());
